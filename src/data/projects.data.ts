@@ -50,33 +50,33 @@ export const projects: readonly Project[] = Object.freeze([
         width: 1906,
         height: 847,
       },
-      {
-        src: "/images/projects/your-project-name/dashboard.png",
-        alt: "Your Project Name dashboard",
-        width: 1440,
-        height: 900,
-      },
-      {
-        src: "/images/projects/your-project-name/mobile.webp",
-        alt: "Your Project Name mobile interface",
-        width: 430,
-        height: 932,
-      },
+      // {
+      //   src: "/images/projects/your-project-name/dashboard.png",
+      //   alt: "Your Project Name dashboard",
+      //   width: 1440,
+      //   height: 900,
+      // },
+      // {
+      //   src: "/images/projects/your-project-name/mobile.webp",
+      //   alt: "Your Project Name mobile interface",
+      //   width: 430,
+      //   height: 932,
+      // },
     ],
 
     liveUrl: "https://grantpilot-client-six.vercel.app",
 
     clientRepositoryUrl: "https://github.com/manjur-moon/grantpilot-client",
 
-    challenges: ["Describe a real development challenge."],
+    challenges: ["While developing GrantPilot-AI, I faced challenges in integrating AI-generated grant recommendations, maintaining secure authentication, managing application data, and synchronizing information between the frontend and backend. Handling document uploads, validating complex forms, protecting private user data, and ensuring consistent AI responses also required careful planning, testing, and debugging."],
 
-    solutions: ["Explain how you solved the challenge."],
+    solutions: ["I solved these challenges by building secure authentication and protected routes, creating structured APIs for grant and application management, and validating data on both the frontend and backend. I also improved document-upload handling, added clear error messages, and carefully tested the AI recommendation flow to ensure reliable, relevant, and consistent responses."],
 
-    learningOutcomes: ["Describe what you learned from this project."],
+    learningOutcomes: ["Developing GrantPilot-AI strengthened my understanding of full-stack MERN development, AI integration, secure authentication, REST API design, document management, and database operations. I also improved my skills in form validation, debugging, error handling, responsive interface design, and building practical AI-powered features for real-world users."],
 
-    improvements: ["Describe something that can be improved."],
+    improvements: ["GrantPilot-AI can be improved by adding more accurate AI recommendations, real-time application status updates, advanced grant filtering, automated deadline reminders, and better document analysis. The platform could also support team collaboration, personalized dashboards, stronger security, and performance optimization for a faster and more reliable user experience."],
 
-    futurePlans: ["Describe a realistic future plan."],
+    futurePlans: ["In the future, I plan to enhance GrantPilot-AI with smarter AI-powered grant matching, automated proposal analysis, personalized deadline reminders, and real-time application tracking. I also aim to add team collaboration, advanced analytics, more secure document management, and scalable cloud infrastructure to support more users and grant opportunities."],
 
     isFeatured: true,
 
@@ -130,22 +130,22 @@ export const projects: readonly Project[] = Object.freeze([
     screenshots: [
       {
         src: "/images/projects/CrowdSpark/home.png",
-        alt: "Second Project Name home page",
+        alt: "CrowdSpark home page",
         width: 1919,
         height: 827,
       },
-      {
-        src: "/images/projects/second-project-name/dashboard.webp",
-        alt: "Second Project Name dashboard",
-        width: 1440,
-        height: 900,
-      },
-      {
-        src: "/images/projects/second-project-name/mobile.webp",
-        alt: "Second Project Name mobile interface",
-        width: 430,
-        height: 932,
-      },
+      // {
+      //   src: "/images/projects/second-project-name/dashboard.webp",
+      //   alt: "Second Project Name dashboard",
+      //   width: 1440,
+      //   height: 900,
+      // },
+      // {
+      //   src: "/images/projects/second-project-name/mobile.webp",
+      //   alt: "Second Project Name mobile interface",
+      //   width: 430,
+      //   height: 932,
+      // },
     ],
 
     liveUrl: "https://crowd-spark-client.vercel.app",
@@ -153,19 +153,19 @@ export const projects: readonly Project[] = Object.freeze([
     clientRepositoryUrl: "https://github.com/manjur-moon/CrowdSpark-client",
 
     challenges: [
-      "Describe a real technical challenge you faced while building the second project.",
+      "While developing CrowdSpark, I faced challenges with secure authentication, role-based access control, campaign and contribution management, and payment integration. Maintaining consistent data between the frontend and backend, validating user input, and handling errors across different user roles were also challenging. Solving these issues improved my understanding of full-stack architecture, API security, and building reliable, user-friendly applications.",
     ],
 
-    solutions: ["Explain how you analyzed and solved the technical challenge."],
+    solutions: ["I solved these challenges by configuring secure authentication and role-based permissions, creating well-structured API routes, validating data on both the frontend and backend, and improving error handling. I also tested payment and contribution flows carefully and used clear state management to keep the user interface synchronized with the database."],
 
     learningOutcomes: [
-      "Describe the technical knowledge and practical experience you gained from this project.",
+      "Developing CrowdSpark strengthened my understanding of full-stack MERN development, secure authentication, role-based access control, REST API design, database management, and payment integration. I also improved my skills in debugging, form validation, error handling, responsive UI design, and deploying a production-ready web application.",
     ],
 
-    improvements: ["Describe an existing area of the project that could be improved."],
+    improvements: ["CrowdSpark can be improved by adding real-time notifications, advanced campaign analytics, social sharing, multiple payment methods, and stronger fraud-prevention features. The platform could also include personalized campaign recommendations, improved accessibility, and better performance optimization to provide a faster, safer, and more engaging user experience."],
 
     futurePlans: [
-      "Describe a realistic feature or improvement that could be added in the future.",
+      "In the future, I plan to expand CrowdSpark with real-time notifications, AI-powered campaign recommendations, advanced analytics, social sharing, and support for multiple payment methods. I also aim to develop a mobile application and improve platform security, scalability, and accessibility to support a larger community of campaign creators and contributors.",
     ],
 
     isFeatured: true,
@@ -238,19 +238,19 @@ export const projects: readonly Project[] = Object.freeze([
     clientRepositoryUrl: "https://github.com/manjur-moon/resell-hub-client",
 
     challenges: [
-      "Describe a real technical challenge you faced while building the third project.",
+      "Implemented secure authentication and protected routes while maintaining user sessions across the application.Managed image uploads with Cloudinary and handled upload failures gracefully.Designed efficient MongoDB schemas and relationships for users, pets, and adoption requests.Built responsive and accessible UI components that work consistently across different devices.Optimized API performance with filtering, searching, sorting, and pagination.Handled deployment issues, including environment variables, CORS configuration, and production debugging.Improved error handling and user feedback to provide a smooth user experience.Maintained a scalable and well-structured codebase following reusable component architecture.",
     ],
 
-    solutions: ["Explain how you analyzed and solved the technical challenge."],
+    solutions: ["Implemented JWT-based authentication with protected routes and centralized middleware to secure user access.Integrated Cloudinary for image uploads with proper validation, error handling, and fallback mechanisms.Designed a normalized MongoDB schema and optimized database queries for better performance.Used reusable React components, custom hooks, and clean project architecture to improve maintainability.Implemented server-side filtering, searching, sorting, and pagination to efficiently handle large datasets.Resolved deployment issues by correctly configuring environment variables, CORS policies, and production API endpoints.Added comprehensive form validation and user-friendly error messages to improve the overall user experience.Performed extensive testing across different browsers and devices to ensure consistent functionality and responsiveness."],
 
     learningOutcomes: [
-      "Describe the technical knowledge and practical experience you gained from this project.",
+      "Strengthened my understanding of the MERN stack by building a complete full-stack application.Gained hands-on experience with RESTful API design and backend development using Express.js and MongoDB.Learned to implement secure authentication, authorization, and protected routes.Improved skills in React component architecture, state management, and reusable UI development.Enhanced knowledge of database design, data relationships, and query optimization.Developed practical experience with image upload services, environment configuration, and third-party integrations.Improved debugging and problem-solving skills by resolving real-world development and deployment issues.Learned Git and GitHub best practices for version control and collaborative development.Gained experience deploying full-stack applications and managing production environments.Improved code quality by following clean architecture, modular design, and maintainable coding practices.",
     ],
 
-    improvements: ["Describe an existing area of the project that could be improved."],
+    improvements: ["Although Resell Hub successfully delivers its core marketplace features, there are several areas for future improvement. Secure online payment integration can be added to support seamless transactions, while real-time order tracking and notifications would improve the overall shopping experience. Introducing an in-app messaging system would enable direct communication between buyers and sellers. The platform could also benefit from product reviews and ratings, wishlist functionality, seller verification, and AI-powered product recommendations. On the administrative side, a dedicated dashboard with advanced analytics, sales reports, and content moderation tools would simplify platform management. Additionally, enhancing security with two-factor authentication, implementing multilingual support, optimizing performance, and developing a mobile application would make Resell Hub more scalable, reliable, and production-ready."],
 
     futurePlans: [
-      "Describe a realistic feature or improvement that could be added in the future.",
+      "The future plan for Resell Hub is to evolve it into a complete and scalable online marketplace that offers a seamless buying and selling experience. I plan to introduce secure online payment integration, real-time order and delivery tracking, and an in-app messaging system to improve communication between buyers and sellers. Advanced product recommendations, personalized user dashboards, and AI-powered search will further enhance the shopping experience. Additionally, I aim to develop a comprehensive admin panel with analytics, user management, product moderation, and sales reporting. As the platform grows, I also plan to implement features such as wishlist management, product reviews and ratings, seller verification, multilingual support, and mobile app integration to make Resell Hub more reliable, user-friendly, and production-ready.",
     ],
 
     isFeatured: true,

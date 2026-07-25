@@ -22,7 +22,7 @@ export const personalInfo: PersonalInfo = Object.freeze({
   preferredContactMethod: "Email",
 
   profileImage: {
-    src: "/images/profile/moon2.jpg",
+    src: "/images/profile/moon1.png",
     alt: "Manjurul Islam Moon",
     width: 800,
     height: 800,
