@@ -1,0 +1,28 @@
+import type { Project } from "@/types/project.types";
+export const sampleProject: Project = {
+  id: "alpha",
+  slug: "alpha-dashboard",
+  title: "Alpha Dashboard",
+  category: "frontend",
+  shortDescription: "A responsive dashboard.",
+  fullDescription: "A complete dashboard created with React and TypeScript.",
+  technologies: ["React", "TypeScript"],
+  features: ["Responsive interface"],
+  thumbnail: {
+    src: "/missing.webp",
+    alt: "Alpha Dashboard preview",
+    width: 1280,
+    height: 720,
+  },
+  screenshots: [],
+  liveUrl: "https://example.com",
+  clientRepositoryUrl: "https://github.com/example/alpha",
+  challenges: [],
+  solutions: [],
+  learningOutcomes: [],
+  improvements: [],
+  futurePlans: [],
+  isFeatured: true,
+  completionDate: "2026-01-01",
+  status: "published",
+};

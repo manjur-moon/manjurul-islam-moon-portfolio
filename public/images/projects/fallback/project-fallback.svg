@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Project image unavailable</title>
+  <desc id="desc">Fallback project image</desc>
+  <rect width="1280" height="720" fill="#020617" />
+  <circle cx="640" cy="320" r="140" fill="#0ea5e9" opacity="0.12" />
+  <rect x="420" y="220" width="440" height="250" rx="28" fill="#0f172a" stroke="#334155" stroke-width="4" />
+  <path d="M500 410 590 320 660 390 720 340 790 420" fill="none" stroke="#38bdf8" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="640" y="565" fill="#94a3b8" font-family="Arial, sans-serif" font-size="34" text-anchor="middle">Project image unavailable</text>
+</svg>

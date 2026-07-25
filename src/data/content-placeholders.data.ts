@@ -1,0 +1,16 @@
+export const CONTENT_PLACEHOLDERS = Object.freeze({
+  professionalDesignation: "[PROFESSIONAL_DESIGNATION]",
+  heroHeadline: "[HERO_HEADLINE]",
+  shortIntroduction: "[SHORT_INTRODUCTION]",
+  aboutDescription: "[ABOUT_DESCRIPTION]",
+  currentLocation: "[CURRENT_LOCATION]",
+  professionalEmail: "[PROFESSIONAL_EMAIL]",
+  phoneNumber: "[PHONE_NUMBER]",
+  githubUrl: "[GITHUB_URL]",
+  linkedinUrl: "[LINKEDIN_URL]",
+  leetcodeUrl: "[LEETCODE_URL]",
+  availabilityStatus: "[AVAILABILITY_STATUS]",
+  preferredContactMethod: "[PREFERRED_CONTACT_METHOD]",
+  profilePhoto: "[PROFILE_PHOTO]",
+  resumeFile: "[RESUME_FILE]",
+} as const);
