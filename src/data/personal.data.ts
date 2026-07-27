@@ -28,7 +28,7 @@ export const personalInfo: PersonalInfo = Object.freeze({
     height: 800,
   },
 
-  resumeUrl: "/documents/manjurul-islam-moon-resume.pdf",
+  resumeUrl: "/documents/Md_Manjurul_Islam_Resume.pdf",
 });
 
 export const socialLinks = Object.freeze([

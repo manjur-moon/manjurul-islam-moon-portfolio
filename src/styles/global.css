@@ -116,3 +116,16 @@ p {
     transition-duration: 0.01ms !important;
   }
 }
+
+.skill-marquee-swiper {
+  overflow: visible;
+}
+
+.skill-marquee-swiper .swiper-wrapper {
+  align-items: center;
+  transition-timing-function: linear !important;
+}
+
+.skill-marquee-swiper .swiper-slide {
+  height: auto;
+}

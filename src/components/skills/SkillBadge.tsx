@@ -1,209 +1,209 @@
-import { motion, useReducedMotion } from "framer-motion";
-import type { ElementType } from "react";
 import {
   BrainCircuit,
-  Braces,
-  CloudCog,
+  Clock3,
   Code2,
-  Database,
+  GraduationCap,
   MessageCircle,
-  MonitorSmartphone,
-  ShieldCheck,
+  RefreshCcw,
   Users,
 } from "lucide-react";
+import type { ElementType } from "react";
 import { FaCss3Alt } from "react-icons/fa6";
 import {
-  SiAxios,
+  SiBootstrap,
   SiExpress,
+  SiFigma,
+  SiFirebase,
   SiGit,
   SiGithub,
   SiHtml5,
   SiJavascript,
   SiMongodb,
   SiNodedotjs,
-  SiPostman,
   SiReact,
-  SiReactrouter,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
+  SiVite,
 } from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
 
 interface SkillVisual {
   readonly icon: ElementType;
   readonly color: string;
+  readonly background: string;
+  readonly border: string;
 }
 
 interface SkillBadgeProps {
   readonly name: string;
-  readonly animationDelay?: number;
 }
 
-const DEFAULT_SKILL_VISUAL: SkillVisual = {
+const DEFAULT_VISUAL: SkillVisual = {
   icon: Code2,
-  color: "#38BDF8",
+  color: "#38bdf8",
+  background: "rgba(14, 116, 144, 0.18)",
+  border: "rgba(56, 189, 248, 0.2)",
 };
 
 const SKILL_VISUALS: Readonly<Record<string, SkillVisual>> = {
+  mongodb: {
+    icon: SiMongodb,
+    color: "#47a248",
+    background: "rgba(21, 128, 61, 0.25)",
+    border: "rgba(71, 162, 72, 0.25)",
+  },
+
   javascript: {
     icon: SiJavascript,
-    color: "#F7DF1E",
+    color: "#f7df1e",
+    background: "rgba(161, 98, 7, 0.3)",
+    border: "rgba(247, 223, 30, 0.2)",
   },
 
   typescript: {
     icon: SiTypescript,
-    color: "#3178C6",
-  },
-
-  html: {
-    icon: SiHtml5,
-    color: "#E34F26",
-  },
-
-  html5: {
-    icon: SiHtml5,
-    color: "#E34F26",
-  },
-
-  css: {
-    icon: FaCss3Alt,
-    color: "#1572B6",
-  },
-
-  css3: {
-    icon: FaCss3Alt,
-    color: "#1572B6",
-  },
-
-  react: {
-    icon: SiReact,
-    color: "#61DAFB",
-  },
-
-  "react router": {
-    icon: SiReactrouter,
-    color: "#CA4245",
-  },
-
-  "react router dom": {
-    icon: SiReactrouter,
-    color: "#CA4245",
-  },
-
-  "tailwind css": {
-    icon: SiTailwindcss,
-    color: "#06B6D4",
-  },
-
-  "responsive web design": {
-    icon: MonitorSmartphone,
-    color: "#38BDF8",
-  },
-
-  "node.js": {
-    icon: SiNodedotjs,
-    color: "#5FA04E",
-  },
-
-  nodejs: {
-    icon: SiNodedotjs,
-    color: "#5FA04E",
+    color: "#3178c6",
+    background: "rgba(30, 64, 175, 0.3)",
+    border: "rgba(49, 120, 198, 0.25)",
   },
 
   "express.js": {
     icon: SiExpress,
-    color: "#F8FAFC",
+    color: "#f8fafc",
+    background: "rgba(51, 65, 85, 0.45)",
+    border: "rgba(148, 163, 184, 0.18)",
   },
 
-  express: {
-    icon: SiExpress,
-    color: "#F8FAFC",
+  "tailwind css": {
+    icon: SiTailwindcss,
+    color: "#06b6d4",
+    background: "rgba(8, 145, 178, 0.25)",
+    border: "rgba(6, 182, 212, 0.22)",
   },
 
-  "rest api": {
-    icon: Braces,
-    color: "#22D3EE",
+  bootstrap: {
+    icon: SiBootstrap,
+    color: "#a855f7",
+    background: "rgba(88, 28, 135, 0.4)",
+    border: "rgba(168, 85, 247, 0.22)",
   },
 
-  mongodb: {
-    icon: SiMongodb,
-    color: "#47A248",
+  firebase: {
+    icon: SiFirebase,
+    color: "#ffca28",
+    background: "rgba(146, 64, 14, 0.38)",
+    border: "rgba(255, 202, 40, 0.2)",
   },
 
-  mongoose: {
-    icon: Database,
-    color: "#C2415D",
+  figma: {
+    icon: SiFigma,
+    color: "#f24e1e",
+    background: "rgba(136, 19, 55, 0.38)",
+    border: "rgba(242, 78, 30, 0.2)",
   },
 
-  jwt: {
-    icon: ShieldCheck,
-    color: "#D946EF",
+  html: {
+    icon: SiHtml5,
+    color: "#e34f26",
+    background: "rgba(127, 29, 29, 0.4)",
+    border: "rgba(227, 79, 38, 0.22)",
   },
 
-  "context api": {
+  html5: {
+    icon: SiHtml5,
+    color: "#e34f26",
+    background: "rgba(127, 29, 29, 0.4)",
+    border: "rgba(227, 79, 38, 0.22)",
+  },
+
+  css: {
+    icon: FaCss3Alt,
+    color: "#1572b6",
+    background: "rgba(30, 58, 138, 0.4)",
+    border: "rgba(21, 114, 182, 0.25)",
+  },
+
+  css3: {
+    icon: FaCss3Alt,
+    color: "#1572b6",
+    background: "rgba(30, 58, 138, 0.4)",
+    border: "rgba(21, 114, 182, 0.25)",
+  },
+
+  react: {
     icon: SiReact,
-    color: "#61DAFB",
+    color: "#61dafb",
+    background: "rgba(8, 145, 178, 0.24)",
+    border: "rgba(97, 218, 251, 0.22)",
   },
 
-  axios: {
-    icon: SiAxios,
-    color: "#5A29E4",
+  "node.js": {
+    icon: SiNodedotjs,
+    color: "#5fa04e",
+    background: "rgba(20, 83, 45, 0.38)",
+    border: "rgba(95, 160, 78, 0.25)",
   },
 
-  vercel: {
-    icon: SiVercel,
-    color: "#F8FAFC",
-  },
-
-  render: {
-    icon: CloudCog,
-    color: "#46E3B7",
-  },
-
-  "mongodb atlas": {
-    icon: SiMongodb,
-    color: "#47A248",
+  vite: {
+    icon: SiVite,
+    color: "#a78bfa",
+    background: "rgba(76, 29, 149, 0.35)",
+    border: "rgba(167, 139, 250, 0.22)",
   },
 
   git: {
     icon: SiGit,
-    color: "#F05032",
+    color: "#f05032",
+    background: "rgba(124, 45, 18, 0.38)",
+    border: "rgba(240, 80, 50, 0.22)",
   },
 
   github: {
     icon: SiGithub,
-    color: "#F8FAFC",
-  },
-
-  "vs code": {
-    icon: VscVscode,
-    color: "#23A8F2",
-  },
-
-  "visual studio code": {
-    icon: VscVscode,
-    color: "#23A8F2",
-  },
-
-  postman: {
-    icon: SiPostman,
-    color: "#FF6C37",
+    color: "#f8fafc",
+    background: "rgba(51, 65, 85, 0.42)",
+    border: "rgba(248, 250, 252, 0.15)",
   },
 
   "problem solving": {
     icon: BrainCircuit,
-    color: "#F59E0B",
+    color: "#f59e0b",
+    background: "rgba(120, 53, 15, 0.42)",
+    border: "rgba(245, 158, 11, 0.22)",
   },
 
   "team collaboration": {
     icon: Users,
-    color: "#8B5CF6",
+    color: "#8b5cf6",
+    background: "rgba(88, 28, 135, 0.42)",
+    border: "rgba(139, 92, 246, 0.22)",
   },
 
   communication: {
     icon: MessageCircle,
-    color: "#10B981",
+    color: "#10b981",
+    background: "rgba(5, 100, 84, 0.38)",
+    border: "rgba(16, 185, 129, 0.22)",
+  },
+
+  adaptability: {
+    icon: RefreshCcw,
+    color: "#38bdf8",
+    background: "rgba(14, 116, 144, 0.3)",
+    border: "rgba(56, 189, 248, 0.22)",
+  },
+
+  "time management": {
+    icon: Clock3,
+    color: "#f97316",
+    background: "rgba(124, 45, 18, 0.4)",
+    border: "rgba(249, 115, 22, 0.22)",
+  },
+
+  "continuous learning": {
+    icon: GraduationCap,
+    color: "#e879f9",
+    background: "rgba(112, 26, 117, 0.4)",
+    border: "rgba(232, 121, 249, 0.22)",
   },
 };
 
@@ -211,83 +211,31 @@ function normalizeSkillName(name: string): string {
   return name.trim().toLowerCase();
 }
 
-export function SkillBadge({
-  name,
-  animationDelay = 0,
-}: SkillBadgeProps): React.JSX.Element {
-  const shouldReduceMotion = useReducedMotion();
-
-  const visual = SKILL_VISUALS[normalizeSkillName(name)] ?? DEFAULT_SKILL_VISUAL;
+export function SkillBadge({ name }: SkillBadgeProps): React.JSX.Element {
+  const visual = SKILL_VISUALS[normalizeSkillName(name)] ?? DEFAULT_VISUAL;
 
   const Icon = visual.icon;
 
   return (
-    <motion.li
-      initial={
-        shouldReduceMotion
-          ? false
-          : {
-              opacity: 0,
-              scale: 0.88,
-              y: 10,
-            }
-      }
-      whileInView={
-        shouldReduceMotion
-          ? undefined
-          : {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-            }
-      }
-      viewport={{
-        once: true,
-        amount: 0.4,
-      }}
-      transition={{
-        duration: 0.35,
-        delay: animationDelay,
-        ease: "easeOut",
-      }}
-      whileHover={
-        shouldReduceMotion
-          ? undefined
-          : {
-              y: -4,
-              scale: 1.05,
-            }
-      }
-      whileTap={
-        shouldReduceMotion
-          ? undefined
-          : {
-              scale: 0.97,
-            }
-      }
+    <div
       style={{
-        color: visual.color,
-        borderColor: `${visual.color}55`,
+        backgroundColor: visual.background,
+        borderColor: visual.border,
       }}
-      className="group relative inline-flex cursor-default items-center gap-2.5 overflow-hidden rounded-full border bg-slate-950/80 px-3.5 py-2 text-sm font-medium shadow-sm transition-shadow duration-300 hover:shadow-lg"
+      className="group flex min-w-max cursor-grab items-center gap-3 rounded-xl border px-5 py-3.5 shadow-lg shadow-slate-950/10 transition duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-xl active:cursor-grabbing active:scale-[0.98]"
     >
-      <span
-        aria-hidden
-        style={{
-          backgroundColor: visual.color,
-        }}
-        className="absolute inset-0 opacity-[0.04] transition-opacity duration-300 group-hover:opacity-[0.13]"
-      />
-
       <Icon
         aria-hidden
-        size={18}
-        className="relative shrink-0 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110"
+        size={21}
+        style={{
+          color: visual.color,
+        }}
+        className="shrink-0 transition duration-300 group-hover:rotate-6 group-hover:scale-110"
       />
 
-      <span className="relative text-slate-200 transition-colors duration-300 group-hover:text-white">
+      <span className="whitespace-nowrap text-sm font-semibold text-slate-100 sm:text-base">
         {name}
       </span>
-    </motion.li>
+    </div>
   );
 }
